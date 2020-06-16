@@ -20,7 +20,11 @@ function Phrase(content) {
   }
 
   // Return true for a palindrome, fales otherwise.
-  this.palindrome = function palindrome() {
-    return this.processedContent() === this.processedContent().reverse();
+    this.palindrome = function palindrome() {
+      if (this.letters()) {
+      return this.processedContent() === this.processedContent().reverse();
+    } else {
+      return false;
+    }
   }
 }
